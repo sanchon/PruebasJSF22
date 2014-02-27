@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/templates/plantillaBasica.xhtml">
+	<ui:define name="content">
+        
+        <h:panelGrid columns="2">
+			<h:outputText value="Nombre" />
+			<h:inputText value="#{buscadorUsuarios.nombre}" />
+ 			<h:outputText value="Apellido 1:" />
+			<h:inputText value="#{buscadorUsuarios.apellido1}" />       
+		 	<h:outputText value="Apellido 2:" />
+			<h:inputText value="#{buscadorUsuarios.apellido2}" />
+		 </h:panelGrid>	
+		 
+		 <h:commandButton value="Buscar" eventHandler="buscadorUsuarios.buscar"></h:commandButton>
+			
+			
+
+	</ui:define>
+</ui:composition>
+</html>
