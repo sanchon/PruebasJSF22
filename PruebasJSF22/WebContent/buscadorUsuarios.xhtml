@@ -18,12 +18,17 @@
 			<h:inputText value="#{buscadorUsuarios.apellido1}" />       
 		 	<h:outputText value="Apellido 2:" />
 			<h:inputText value="#{buscadorUsuarios.apellido2}" />
+		    <h:commandButton value="Buscar" actionListener="#{buscadorUsuarios.buscar}" ></h:commandButton>
+		    <h:outputText id="estadoBusqueda" value="#{buscadorUsuarios.estadoBusqueda}"/>
 		 </h:panelGrid>	
 		
+		 <hr/>
 		 
-		 <h:commandButton value="Buscar" actionListener="#{buscadorUsuarios.buscar}" ></h:commandButton>
-			
-		 <h:outputText id="estadoBusqueda" value="#{buscadorUsuarios.estadoBusqueda}"/>
+		 <h:dataTable value="#{buscadorUsuarios.resultados}" var="usu">
+		   <h:column>
+		     <h:outputText value="#{usu.nombre}"></h:outputText>
+		   </h:column>
+		 </h:dataTable> 
 
 	  </h:form>
 
