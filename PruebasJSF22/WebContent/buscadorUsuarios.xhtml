@@ -24,9 +24,18 @@
 		
 		 <hr/>
 		 
-		 <h:dataTable value="#{buscadorUsuarios.resultados}" var="usu">
+		 <h:dataTable value="#{buscadorUsuarios.resultados}" var="usu" border="1" cellspacing="0">
 		   <h:column>
 		     <h:outputText value="#{usu.nombre}"></h:outputText>
+		   </h:column>
+		   <h:column>
+		     <h:outputText value="#{usu.apellidos}"></h:outputText>
+		   </h:column>
+		   <h:column>
+		     <h:outputText value="#{usu.id}"></h:outputText>
+		   </h:column>
+		   <h:column id="puesto">
+		     <h:outputText value="#{usu.puesto}"></h:outputText>
 		   </h:column>
 		 </h:dataTable> 
 
