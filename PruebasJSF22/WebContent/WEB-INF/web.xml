@@ -1,35 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
   <display-name>PruebasJSF22</display-name>
+
+
+  <!-- La página por defecto ("welcome file") -->
   <welcome-file-list>
     <welcome-file>buscadorUsuarios.xhtml</welcome-file>
   </welcome-file-list>
+
+
+  <!-- El servlet de JSF -->
   <servlet>
     <servlet-name>Faces Servlet</servlet-name>
     <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  
+
+  <!-- Aunque por defecto viene el patrón a /faces/* me parece
+       mejor simplemente mapear los xhtml, y pasar de la carpeta faces -->
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
+  
+
+  <!-- Supongo que esto es como en .net. Si el viewstate lo guarda el cliente
+       hay más trasiego de datos por la red, pero gasta menos memoria -->
   <context-param>
     <description>State saving method: 'client' or 'server' (=default). See JSF Specification 2.5.2</description>
     <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
     <param-value>client</param-value>
   </context-param>
+  
+
+  <!-- No sé qué es esto, hay que investigarlo -->
   <context-param>
     <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
     <param-value>resources.application</param-value>
   </context-param>
   
-  <!-- Para activar la depuración en las vistas JSF -->
+
+  <!-- Para activar la depuración en las vistas JSF, es un parámetro que luego
+       se examina en la plantilla básica para activar o no la depuración -->
   <context-param>
     <param-name>javax.faces.FACELETS_DEVELOPMENT</param-name>
     <param-value>true</param-value>
   </context-param>
   
+
+  <!-- No sé qué es esto, hay que investigarlo -->
   <listener>
     <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
   </listener>
+
+
+  <!-- La página de error también va a ser JSF -->
+  <error-page>
+     <exception-type>java.lang.RuntimeException</exception-type>
+     <location>/error.xhtml</location>
+  </error-page>
+
+
 </web-app>

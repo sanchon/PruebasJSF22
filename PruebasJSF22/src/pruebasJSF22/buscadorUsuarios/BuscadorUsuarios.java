@@ -1,5 +1,6 @@
 package pruebasJSF22.buscadorUsuarios;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,9 +66,11 @@ public class BuscadorUsuarios
 		Usuario u2 = new Usuario("Mengano", "Rodríguez", 2, "Coordinador");
 		
 		resultados = new ArrayList<Usuario>();
-		
 		resultados.add(u1);
 		resultados.add(u2);
+		
+		int a = 0;
+		int b = 2/a;
 		
 	}
 	public List<Usuario> getResultados()
