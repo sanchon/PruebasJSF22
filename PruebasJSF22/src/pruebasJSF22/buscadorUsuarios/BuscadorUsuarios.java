@@ -57,10 +57,26 @@ public class BuscadorUsuarios
 	// --------------------------------------------
 	// Metodos
 	// --------------------------------------------
+	
+	/*
+	 * Este método típicamente invocaría a un servicio de negocio que haría
+	 * la búsqueda en la base de datos a partir de los parámetros. 
+	 * 
+	 * Vamos a usarlo para probar algunas cosas:
+	 *  - si en el nombre del usuario metemos "hugo" se generará una excepción
+	 *  - si en el nombre del usuario metemos cualquier otra cosa, se generará
+	 *    una lista de resultados de prueba
+	 */
 	public void buscar()
 	{
 		
-		this.estadoBusqueda = "Buscando";
+		if (this.nombre.equals("Hugo"))
+		{
+			//forzamos una / by 0 exception
+			int a = 0;
+			a = 2/a;
+		}
+		
 		
 		Usuario u1 = new Usuario("Fulano", "Pérez", 1, "Gerente");
 		Usuario u2 = new Usuario("Mengano", "Rodríguez", 2, "Coordinador");
@@ -69,8 +85,6 @@ public class BuscadorUsuarios
 		resultados.add(u1);
 		resultados.add(u2);
 		
-		int a = 0;
-		int b = 2/a;
 		
 	}
 	public List<Usuario> getResultados()

@@ -56,9 +56,10 @@
   </listener>
 
 
-  <!-- La página de error también va a ser JSF -->
+  <!-- La página de error también va a ser JSF, voy a enviar todos los
+       errores a la página de error, así que configuro Throwable        -->
   <error-page>
-     <exception-type>java.lang.RuntimeException</exception-type>
+     <exception-type>java.lang.Throwable</exception-type>
      <location>/error.xhtml</location>
   </error-page>
 
