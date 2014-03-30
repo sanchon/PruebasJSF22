@@ -50,11 +50,11 @@
   </context-param>
   
 
-  <!-- No sé qué es esto, hay que investigarlo -->
+  <!-- No sé qué es esto, hay que investigarlo 
   <listener>
     <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
   </listener>
-
+  -->
 
   <!-- La página de error también va a ser JSF, voy a enviar todos los
        errores a la página de error, así que configuro Throwable        -->
