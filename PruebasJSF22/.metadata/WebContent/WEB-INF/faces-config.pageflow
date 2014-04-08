@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13943005957550" configfile="/PruebasJSF22/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13943005957550" configfile="/PruebasJSF22/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="buscadorUsuarios.xhtml" x="36" y="60" id="pf13969725164240" outlinks="pf13969725164241" path="/buscadorUsuarios.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="detalleUsuario.xhtml" x="324" y="60" id="pf13969725164242" inlinks="pf13969725164241" path="/detalleUsuario.xhtml"/>
+  <links id="pf13969725164241" target="pf13969725164242" source="pf13969725164240" outcome="ver_detalle_usuario"/>
+</pageflow:Pageflow>
