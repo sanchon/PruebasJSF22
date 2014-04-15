@@ -6,12 +6,29 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 
+<f:metadata>
+  <f:viewParam name="usuarioId" value="#{detalleUsuario.id}"/>
+  <f:viewAction action="#{detalleUsuario.cargarDesdeBD}"></f:viewAction>
+</f:metadata>
+
+
+
 <ui:composition template="WEB-INF/templates/plantillaBasica.xhtml">
 	<ui:define name="content">
 		<h2> 
-		     <h:outputText value="Nombre" />
-		     <h:outputText value="" /> 
+			<h:panelGrid columns="2">
+				<h:outputText value="#{detalleUsuario.nombre}" />
+				<h:outputText value="#{detalleUsuario.apellidos}" /> 
+			</h:panelGrid>
 		</h2>
+		<p>
+			<h:panelGrid columns="2">
+				<h:outputText value="Puesto:" />
+				<h:outputText value="#{detalleUsuario.puesto}" />
+				<h:outputText value="Id:" /> 
+				<h:outputText value="#{detalleUsuario.id}" />
+			</h:panelGrid>
+		</p>
 	</ui:define>
 </ui:composition>
 </html>

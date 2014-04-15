@@ -37,7 +37,9 @@
 		     <h:outputText value="#{usu.puesto}"></h:outputText>
 		   </h:column>
 		   <h:column id="ver_detalle">
-		    <h:link outcome="ver_detalle_usuario" value="Ver Detalle" />
+		    <h:link outcome="ver_detalle_usuario" includeViewParams="true" value="Ver Detalle">
+		       <f:param name="usuarioId" value="#{usu.id}"/>
+		    </h:link>
 		   </h:column>
 		 </h:dataTable> 
 
