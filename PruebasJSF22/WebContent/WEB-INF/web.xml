@@ -65,11 +65,17 @@
   </context-param>
   
 
-  <!-- No sé qué es esto, hay que investigarlo 
+  <!-- No sé qué es esto, hay que investigarlo, pero parece que no hace mucha falta
   <listener>
     <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
   </listener>
   -->
+ 
+   
+  <listener>
+    <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
+  </listener> 
+ 
 
   <!-- La página de error también va a ser JSF, voy a enviar todos los
        errores a la página de error, así que configuro Throwable        -->

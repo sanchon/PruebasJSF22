@@ -28,10 +28,29 @@
   </build>
   <description>Una web de prueba, para experimentar con jsf 2.2</description>
   <dependencies>
+    
+    <!-- Mojarra: 
   	<dependency>
   		<groupId>org.glassfish</groupId>
   		<artifactId>javax.faces</artifactId>
   		<version>2.2.6</version>
   	</dependency>
+  	-->   
+  	
+  	<!-- Apache MyFaces: -->
+  	<dependency>
+		<groupId>org.apache.myfaces.core</groupId>
+		<artifactId>myfaces-api</artifactId>
+		<version>2.2.2</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.myfaces.core</groupId>
+		<artifactId>myfaces-impl</artifactId>
+	<version>2.2.2</version>
+	
+	
+	
+</dependency>
+	<!-- -->
   </dependencies>
 </project>
