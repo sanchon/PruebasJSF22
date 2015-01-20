@@ -71,11 +71,12 @@
   </listener>
   -->
  
-   
+  <!-- Hace falta para la implementación de apache (myfaces) pero no para Mojarra -->
+  <!-- 
   <listener>
     <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
   </listener> 
- 
+  -->
 
   <!-- La página de error también va a ser JSF, voy a enviar todos los
        errores a la página de error, así que configuro Throwable        -->
