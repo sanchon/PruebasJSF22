@@ -78,7 +78,7 @@ public class BuscadorUsuarios
 		
 		
 		Usuario u1 = new Usuario("Fulano", "Pérez", 1, "Gerente");
-		Usuario u2 = new Usuario("Mengano", "Rodríguez", 2, "Coordinador");
+		Usuario u2 = new Usuario("Mengano", "Mengánez", 2, "Coordinador");
 		
 		resultados = new ArrayList<Usuario>();
 		resultados.add(u1);
