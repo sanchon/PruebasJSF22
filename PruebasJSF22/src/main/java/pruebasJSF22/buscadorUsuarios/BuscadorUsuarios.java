@@ -19,7 +19,8 @@ public class BuscadorUsuarios
 	private String apellido1;
 	private String apellido2;
 	
-	private String estadoBusqueda;
+	
+	
 
 	private List<Usuario> resultados;
 	
@@ -48,10 +49,6 @@ public class BuscadorUsuarios
 		this.apellido2 = apellido2;
 	}
 	
-	public String getEstadoBusqueda()
-	{
-		return this.estadoBusqueda;
-	}
 	
 	// --------------------------------------------
 	// Metodos
@@ -86,6 +83,7 @@ public class BuscadorUsuarios
 		
 		
 	}
+
 	public List<Usuario> getResultados()
 	{
 		return resultados;
